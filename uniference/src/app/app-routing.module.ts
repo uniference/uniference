@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './Rutas/Page-not-found/page-not-found.component';
-import { EvaluarComponent } from './Rutas/Evaluar/evaluar.component';
-import { TutoresComponent } from './Rutas/Tutores/tutores.component';
-import { InicioComponent } from './Rutas/Inicio/inicio.component';
-import { LoginComponent } from './Rutas/Users/login/login.component';
-import { RegistroComponent } from './Rutas/Users/registro/registro.component';
+import { PageNotFoundComponent } from './rutas/page-not-found/page-not-found.component';
+import { EvaluarComponent } from './rutas/evaluar/evaluar.component';
+import { TutoresComponent } from './rutas/tutores/tutores.component';
+import { InicioComponent } from './rutas/inicio/inicio.component';
+import { LoginComponent } from './rutas/users/login/login.component';
+import { RegistroComponent } from './rutas/users/registro/registro.component';
 
 const routes: Routes = [
   {
@@ -13,11 +13,11 @@ const routes: Routes = [
     component: InicioComponent
   },
   {
-    path: 'Tutores',
+    path: 'tutores',
     component: TutoresComponent
   },
   {
-    path: 'Evaluar',
+    path: 'evaluar',
     component: EvaluarComponent
   },
   { 
@@ -31,12 +31,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'Page-not-found',
+    path: 'page-not-found',
     component: PageNotFoundComponent
   },
   {
     path: '**',
-    redirectTo: 'Page-not-found'
+    redirectTo: 'page-not-found'
   }
 ];
 
