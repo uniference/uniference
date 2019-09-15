@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './Rutas/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './Rutas/Page-not-found/page-not-found.component';
 import { EvaluarComponent } from './Rutas/Evaluar/evaluar.component';
 import { TutoresComponent } from './Rutas/Tutores/tutores.component';
 import { InicioComponent } from './Rutas/Inicio/inicio.component';

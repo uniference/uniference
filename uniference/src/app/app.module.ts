@@ -15,7 +15,7 @@ import { DemoMaterialModule } from './material-module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
-import { PageNotFoundComponent } from './Rutas/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './Rutas/Page-not-found/page-not-found.component';
 import { EvaluarComponent } from './Rutas/Evaluar/evaluar.component';
 import { TutoresComponent } from './Rutas/Tutores/tutores.component';
 import { ApartamentosComponent } from './Rutas/Apartamentos/apartamentos.component';
