@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
+import { ComentariosService } from 'src/app/services/comentarios.service';
 
 
 
@@ -14,20 +15,38 @@ import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
   }]
 })
 export class ComentarComponent implements OnInit {
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
-  thirdFormGroup: FormGroup;
-  quarterFormGroup: FormGroup;
+  Comentario: FormGroup;
+  univ: String;
  
-  constructor(private _formBuilder: FormBuilder) { }
+  constructor(private _formBuilder: FormBuilder,public comentarioService: ComentariosService) { }
 
   ngOnInit() {
-    this.firstFormGroup = this._formBuilder.group({
-      firstCtrl: ['', Validators.required],
-      secondCtrl: ['', Validators.required],
-      thirdCtrl: ['', Validators.required],
-      quarterCtrl: ['', Validators.required]
+    this.Comentario = this._formBuilder.group({
+      profesor: ['', Validators.required],
+      materia: ['', Validators.required],
+      comentario: ['', Validators.required],
+      rating: ['', Validators.required],
+      aceptado: [false]
     });
+  }
+  onSubmit(){
+    switch (this.univ) {
+      case "utp":
+        this.comentarioService.crearComentarioUTP(this.Comentario.value)
+      break;
+      case "latina":
+        this.comentarioService.crearComentarioLATINA(this.Comentario.value)
+      break;
+      case "nacional":
+        this.comentarioService.crearComentarioNACIONAL(this.Comentario.value)
+      break;
+      case "usma":
+        this.comentarioService.crearComentarioUSMA(this.Comentario.value)
+      break;
+    
+      default:
+        break;
+    }  
   }
 
 }

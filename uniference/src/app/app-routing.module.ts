@@ -7,6 +7,7 @@ import { InicioComponent } from './rutas/inicio/inicio.component';
 import { LoginComponent } from './rutas/users/login/login.component';
 import { RegistroComponent } from './rutas/users/registro/registro.component';
 
+
 const routes: Routes = [
   {
     path: '',

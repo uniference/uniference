@@ -1,34 +1,42 @@
 
-    
+
+          <div class="group">
+              <label>Universidad</label>
+                <select id="universidad" [(ngModel)]="univ" required>
+                    <option value="utp">Universidad Tecnologica de Panama</option>
+                    <option value="latina">Universidad Latina</option>
+                    <option value="nacional">Universidad de Panama</option>
+                    <option value="usma">USMA</option>
+                  </select>
+              <div class="bar"></div>
+            </div>
  
-  <form action="" [formGroup]="firstFormGroup">
+  <form action="" [formGroup]="Comentario">
 
       <img class="circular--square img-sombra-clr imagen" width="200" alt="Univerdidad Logo" src="../assets/u.png ">
           
       <div class="centered">
 
           <div class="group">
-            <input type="text" id="name" formControlName="firstCtrl" required><label for="name">¿Cuál es el nombre de su escuela/universidad?</label>
+              <input type="text" id="nombre" formControlName="profesor" required><label for="nombre">¿Cuál es el nombre de su profesor?</label>
+              <div class="bar"></div>
+          </div>
+          <div class="group">
+              <input type="text" id="materia" formControlName="materia" required><label for="materia">¿Cuál es la materia de su profesor?</label>
+              <div class="bar"></div>
+          </div>
+          <textarea class="fondo-comentar comentario entrada" placeholder="Comentario" formControlName="comentario" rows="10"></textarea>
+          <div class="group">
+            <input type="number" id="rating" formControlName="rating" required><label for="rating">¿Cuál es el rating de su profesor?</label>
             <div class="bar"></div>
-          </div>
-          <div class="group">
-              <input type="text" id="name" formControlName="secondCtrl" required><label for="name">¿Cuál es el nombre de su profesor?</label>
-              <div class="bar"></div>
-          </div>
-          <div class="group">
-              <input type="text" id="name" formControlName="thirdCtrl" required><label for="name">¿Cuál es la materia de su profesor?</label>
-              <div class="bar"></div>
-          </div>
+        </div>
+        </div>
 
-      </div>
+        
 
-      <textarea class="fondo-comentar comentario entrada" placeholder="Comentario" formControlName="quarterCtrl" rows="10"></textarea>  
-
-          <app-puntaje class="puntos"></app-puntaje>
-          
-      
-            <button class="submit entrada boton" onclick="">Enviar</button>
+          <!-- <app-puntaje class="puntos"></app-puntaje> -->       
   </form>
+  <button class=" btn btn-submit submit entrada boton" (click)="onSubmit()">Enviar</button>
 
 
 

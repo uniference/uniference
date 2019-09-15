@@ -30,7 +30,10 @@ import { RegistroComponent } from './rutas/users/registro/registro.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { PuntajeComponent } from './rutas/evaluar/componentes_Evaluar/comentar/puntaje/puntaje.component';
+import { PuntajeComponent } from './rutas/evaluar/componentes_evaluar/comentar/puntaje/puntaje.component';
+import { environment } from 'src/environments/environment';
+import { ComentariosService } from './services/comentarios.service';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 
 
@@ -70,10 +73,10 @@ import { PuntajeComponent } from './rutas/evaluar/componentes_Evaluar/comentar/p
     FontAwesomeModule,
     AngularFontAwesomeModule,
     HttpClientModule,
-    AngularFireModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule
   ],
-  providers: [AngularFireAuth],
+  providers: [AngularFireAuth, AngularFirestore, AngularFireDatabaseModule, ComentariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
