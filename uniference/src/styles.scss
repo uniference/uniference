@@ -1,0 +1,177 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url(https://fonts.googleapis.com/icon?family=Roboto);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+
+
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body { 
+  height: 100%; 
+}
+
+body { 
+  margin: 0; 
+  font-family: "Studly Free", "Mona Lite", "Roboto", "Helvetica Neue", sans-serif;
+  //background: #009688;
+}
+
+.titulo{
+  font-size: calc(1em + 3vw);
+  margin: 0;
+}
+
+.subtitulo{
+  font-family: "Schrader Free", "STXingkai", "Mona Lite", "Roboto", "Helvetica Neue", sans-serif !important;
+  border: 3px;
+  border-color: black;
+  font-size: calc(1em + 2vw);
+  padding-left: 300px;
+}
+
+/*Quitar el focus de los botones*/
+button:focus {
+  outline:0;
+}
+
+/*Cambiar el tamaño de los iconos*/
+.material-icons.md-18 { 
+  font-size: 18px; 
+}
+
+.material-icons.md-24 { 
+  font-size: 24px; 
+}
+
+.material-icons.md-36 { 
+  font-size: 36px; 
+}
+
+.material-icons.md-48 { 
+  font-size: 48px; 
+}
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark { 
+  color: rgba(0, 0, 0, 0.54); 
+}
+
+.material-icons.md-dark.md-inactive { 
+  color: rgba(0, 0, 0, 0.26); 
+}
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { 
+  color: rgba(255, 255, 255, 1); 
+}
+
+.material-icons.md-light.md-inactive { 
+  color: rgba(255, 255, 255, 0.3); 
+}
+
+/*Cambiar el color del icono*/
+.material-icons.orange600 { 
+  color: #FB8C00; 
+}
+
+/* label style */
+.mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled), .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled), .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled){
+    background: #52c7b8;
+    color:white;
+    font-weight: bold;
+    font-size: 15px
+}
+
+.mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):hover, .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):hover, .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):hover, .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):hover{
+  opacity: 1.6;
+}
+
+/* focus style */
+.mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus, .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus{
+    background: #00675b;
+}
+
+.mat-tab-group.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus:hover, .mat-tab-group.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus:hover, .mat-tab-nav-bar.mat-primary .mat-tab-label:not(.mat-tab-disabled):focus:hover, .mat-tab-nav-bar.mat-primary .mat-tab-link:not(.mat-tab-disabled):focus:hover{
+  opacity: 0.6;
+}
+
+/* ink bar style */
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background: #ffff00;
+    height: 5px;
+} 
+
+.mat-tab-group {
+    margin-bottom: 48px;
+}
+
+/*Volver imagenes circulares*/
+.circular--square {
+  border-radius: 50%;
+}
+
+/*Agregar sombra a contenedores*/
+.sombra {
+  box-shadow: 2px 2px 10px #666;        /* Sombra normal */
+  box-shadow: 5px -5px 0 2px #444;      /* Sombra superior sin desenfoque */
+  box-shadow: 5px 5px 25px #222 ;
+}
+
+/*Agregar sombra a texto*/
+.txt-sombra-clr{
+  text-shadow: 2px 2px 0 #AAA,      /* Sombra 1 */
+               6px 6px 2px #777,    /* Sombra 2 */
+               12px 12px 8px #444;  /* Sombra 3 */
+    
+}
+
+.txt-sombra-osc{
+  text-shadow: 2px 2px 0 rgb(70, 70, 70),      /* Sombra 1 */
+               6px 6px 2px rgb(46, 45, 45),    /* Sombra 2 */
+               12px 12px 8px rgb(26, 26, 26);  /* Sombra 3 */
+}
+
+ /*Agregarle sombra a imagenes*/
+.img-sombra-clr {
+  filter: drop-shadow(5px 5px 10px #444);
+}
+
+.img-sombra-osc {
+  filter: drop-shadow(5px 5px 10px black);
+}
+
+/*Hacer texto responsive*/
+.estilo-x-menu { 
+  font-size: calc(1em + 1vw) 
+}
+
+/*Centrear contenedores*/
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+/*Colores gradientes*/
+.clr_llamativo{
+  background-color: linear-gradient(to right,#f7ff00,#db36a4)
+}
+
+.clr_llamativo:hover{
+  color: #1883ba;
+  background-color: #ffffff;
+  opacity: 0.6;
+}
+
+/*Texto Blanco*/
+.white-text{
+  color: white;
+}
+

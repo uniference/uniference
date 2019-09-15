@@ -1,0 +1,22 @@
+
+    <mat-tab-group class="mat-group-margen" mat-stretch-tabs>
+
+      <mat-tab class="aspecto"><ng-template mat-tab-label><fa-icon [icon]="faComments" size="2x"></fa-icon>&nbsp;Comentar</ng-template>
+        <div class="contenedor-menu" scroll=no>
+            <app-comentar></app-comentar>
+        </div>
+      </mat-tab>
+
+      <mat-tab><ng-template mat-tab-label><fa-icon [icon]="faSearch" size="2x"></fa-icon>&nbsp;Buscar</ng-template>
+        <div class="contenedor-menu" scroll=no>
+          <app-buscar></app-buscar>
+        </div>
+      </mat-tab>
+      
+      <mat-tab><ng-template mat-tab-label><fa-icon [icon]="faHandsHelping" size="2x"></fa-icon>&nbsp;Apoya</ng-template>
+          <mat-card>
+          </mat-card>
+      </mat-tab>
+
+    </mat-tab-group>
+  

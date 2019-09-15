@@ -1,0 +1,34 @@
+
+    
+ 
+  <form action="" [formGroup]="firstFormGroup">
+
+      <img class="circular--square img-sombra-clr imagen" width="200" alt="Univerdidad Logo" src="../assets/u.png ">
+          
+      <div class="centered">
+
+          <div class="group">
+            <input type="text" id="name" formControlName="firstCtrl" required><label for="name">¿Cuál es el nombre de su escuela/universidad?</label>
+            <div class="bar"></div>
+          </div>
+          <div class="group">
+              <input type="text" id="name" formControlName="secondCtrl" required><label for="name">¿Cuál es el nombre de su profesor?</label>
+              <div class="bar"></div>
+          </div>
+          <div class="group">
+              <input type="text" id="name" formControlName="thirdCtrl" required><label for="name">¿Cuál es la materia de su profesor?</label>
+              <div class="bar"></div>
+          </div>
+
+      </div>
+
+      <textarea class="fondo-comentar comentario entrada" placeholder="Comentario" formControlName="quarterCtrl" rows="10"></textarea>  
+
+          <app-puntaje class="puntos"></app-puntaje>
+          
+      
+            <button class="submit entrada boton" onclick="">Enviar</button>
+  </form>
+
+
+
